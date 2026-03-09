@@ -1,0 +1,106 @@
+/* Paleta e base (mesma da v7) */
+:root{ --bg-start:#0e1116; --bg-end:#1a2233; --surface:#141a24; --surface-2:#0f1622; --card:#151c28; --stroke:#2a354a; --text:#eaf1ff; --muted:#b8c4d9; --brand:#2f6fb3; --brand-alpha:rgba(47,111,179,.08); --brand-alpha-2:rgba(47,111,179,.25); --btn:#123b68; --btn-hover:#16477e; --radius:14px; --shadow:0 12px 30px rgba(0,0,0,.35) }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{ margin:0; font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%) }
+img{max-width:100%; display:block}
+a{color:var(--text); text-decoration:none}
+.container{ width:min(1120px, 92%); margin-inline:auto }
+.section{ padding:80px 0 }
+.center{ text-align:center }
+.topbar.empty{ position:sticky; top:0; z-index:10; height:52px; background:rgba(15,22,34,.65); border-bottom:1px solid rgba(255,255,255,.06); backdrop-filter: blur(10px) }
+
+/* HERO */
+.hero{ position:relative; padding:140px 0 90px; background: radial-gradient(1200px 600px at 80% 10%, var(--brand-alpha), transparent 60%) }
+.hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center }
+.hero h1{ font-size: clamp(2.1rem, 4vw, 3.1rem); line-height:1.15; margin:0 0 12px }
+.hero p{ color:var(--muted); margin:0 0 22px }
+.hero-figure{ padding:10px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)); border-radius:var(--radius); box-shadow:var(--shadow) }
+.hero-photo{ border-radius: calc(var(--radius) - 8px); aspect-ratio: 4 / 5; object-fit: cover }
+
+/* Botões */
+.btn{ display:inline-flex; align-items:center; gap:10px; background:var(--btn); color:#fff; font-weight:700; padding:14px 20px; border-radius:12px; border:1px solid rgba(255,255,255,.06); box-shadow:0 10px 22px rgba(0,0,0,.25); transition: transform .06s ease, box-shadow .2s ease, background .15s ease }
+.btn:hover{ transform: translateY(-1px); background:var(--btn-hover); box-shadow:0 14px 28px rgba(0,0,0,.33) }
+.btn svg{ width:18px; height:18px; flex:0 0 auto }
+
+/* Sobre */
+.sobre-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:start }
+.sobre-grid p{ color:var(--muted) }
+.sobre-card{ background:var(--card); border:1px solid var(--stroke); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow) }
+.sobre-card ul{ margin:0; padding-left:18px; color:var(--muted) }
+
+/* Serviços */
+.services.dark{ background: radial-gradient(900px 450px at 50% 0%, var(--brand-alpha), transparent 70%) }
+.overline{ text-align:center; letter-spacing:.25em; color:var(--muted); font-size:.8rem; margin:0 0 12px }
+.services-title{ text-align:center; max-width:900px; margin:0 auto 26px; font-weight:600 }
+.services-title span{ color:var(--brand) }
+.services-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px }
+.service-card{ position:relative; background:linear-gradient(180deg, rgba(20,26,36,.9), rgba(20,26,36,.7)); border:1px solid var(--stroke); border-radius:12px; padding:22px; box-shadow:var(--shadow) }
+.service-card h3{ color:var(--brand); margin:8px 0 10px }
+.service-card p{ color:var(--muted); margin:0 }
+.svc-icon{ width:36px; height:36px; display:grid; place-items:center; background:var(--brand-alpha); border:1px solid var(--brand-alpha-2); border-radius:8px; color:var(--brand) }
+.svc-icon svg path{ fill:var(--brand) }
+
+/* MANIFESTO com espaço para foto acima do texto */
+.manifesto .container{ display:grid; gap:18px; align-items:center; justify-items:center; }
+.manifesto-photo{ width:min(820px, 96%); border-radius:16px; overflow:hidden; border:1px solid var(--stroke); box-shadow:var(--shadow); background: #10151f }
+.manifesto-photo img{ width:100%; height:auto; display:block; object-fit:cover }
+.manifesto-box{ width:min(820px, 96%); background:linear-gradient(180deg, rgba(20,26,36,.92), rgba(20,26,36,.85)); border:1px solid var(--stroke); border-radius:12px; padding:26px; box-shadow:var(--shadow) }
+.manifesto-box p{ margin:0; text-align:center; color:#eaf1ff; font-size:1.05rem; line-height:1.6 }
+.manifesto-box .em{ color:var(--brand); font-weight:700 }
+
+/* Depoimentos / FAQ / Contato */
+.cards{ display:grid; gap:18px }
+.testimonials{ grid-template-columns:repeat(3,1fr) }
+.card{ background:var(--card); border:1px solid var(--stroke); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow) }
+.faq.dark{ background: radial-gradient(900px 400px at 50% 0%, var(--brand-alpha), transparent 70%) }
+.faq h2{ text-align:center; margin-bottom:28px }
+.faq-item{ background: var(--surface-2); border:1px solid var(--stroke); border-radius:12px; padding: 0 16px; margin-bottom:14px; box-shadow: var(--shadow) }
+.faq-item summary{ list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 0 }
+.faq-item summary span:first-child{ color: var(--brand); font-weight:700 }
+.faq-item .ico{ color: var(--brand); font-weight:700; font-size:18px }
+.faq-item p{ color:var(--muted); margin: 0 0 16px }
+
+/* Contato */
+.contato-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start }
+.form{ background:var(--surface-2); border:1px solid var(--stroke); border-radius:12px; padding:18px }
+label{ display:block; margin:.2rem 0 .3rem; color:#eaf1ff }
+input, textarea{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid #263247; background:#0f1622; color:#fff; outline:none }
+input:focus, textarea:focus{ border-color:#35507a; box-shadow:0 0 0 3px rgba(53,80,122,.25) }
+button.btn{ border:0; cursor:pointer }
+
+/* Footer e WhatsApp */
+.footer{ padding:32px 0; border-top:1px solid rgba(255,255,255,.06) }
+.footer-grid{ display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap }
+.footer a{ color:var(--muted) }
+.footer a:hover{ color:#fff }
+.whatsapp-float{ position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #25D366; color: #ffffff; box-shadow: 0 8px 20px rgba(0,0,0,.30); transition: transform .12s ease, box-shadow .2s ease }
+.whatsapp-float:hover{ transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,.36) }
+
+/* Responsivo */
+@media (max-width: 960px){ .hero-grid, .sobre-grid, .contato-grid{ grid-template-columns:1fr } .services-cards, .testimonials{ grid-template-columns:1fr } .hero{ padding-top:120px } }
+
+
+/* === Depoimentos estilo referência com aspas + animação === */
+.depo {background:#0b0d11;padding-top:70px;padding-bottom:90px}
+.depo .overline{text-align:center;letter-spacing:.28em;color:var(--muted);margin-bottom:10px}
+.depo-title{text-align:center;font-size:clamp(1.6rem,3vw,2.2rem);color:#eaf1ff;font-weight:700;margin-bottom:40px}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.depo-card{position:relative;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(4px);border-radius:16px;padding:24px 22px 22px;box-shadow:0 10px 26px rgba(0,0,0,.25);transition:border-color .2s ease, transform .15s ease, box-shadow .2s ease}
+.depo-card:hover{transform:translateY(-2px);border-color:rgba(47,111,179,.45);box-shadow:0 16px 34px rgba(0,0,0,.34)}
+.quote-icon{position:absolute;top:14px;left:18px;color:rgba(234,241,255,.28)}
+.depo-card .depo-quote{margin-top:10px}
+.depo-quote{color:rgba(234,241,255,0.88);font-size:1rem;line-height:1.55;margin-bottom:18px}
+.depo-author strong{color:var(--brand);font-size:1rem;font-weight:700}
+.depo-author span{display:block;color:var(--muted);font-size:.95rem}
+
+/* animação on-scroll */
+.aos-fade-up{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;transition-delay:var(--aos-delay,0ms)}
+.aos-fade-up.is-visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:960px){.testimonials{grid-template-columns:1fr}}
+
+.clean-cta{background:#0b0d11;padding:90px 0 110px;text-align:center}
+.clean-cta h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;color:#eaf1ff;margin-bottom:10px}
+.clean-cta p{color:rgba(234,241,255,.85);margin-bottom:26px;font-size:1.06rem}
+.clean-cta .btn{padding:14px 28px;border-radius:12px;font-weight:700}
